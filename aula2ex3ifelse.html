@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ganho, comissaoMais, comissaoMenos;
+        ganho = parseFloat(prompt("Digite quando ganhou em mês"));
+        comissaoMais = ganho * (4/100);
+        comissaoMenos = ganho * (2/100);
+        if(ganho >= 100000){
+            document.write("Sua comissão é ", comissaoMais);
+           }else{
+            document.write("Sua comissão é ", comissaoMenos); 
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

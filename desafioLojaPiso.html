@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var metrosPiso, metrosAmbiente, valorCheio, valorMetroPiso; 
+        var bemVindo, orcamento, valorPiso, areaAmbiente, areaComprada, alertaArea, larguraAmbiente, comprimentoAmbiente, formaPagamento, dinheiro, debito, creditoAvista, parcelado;
+
+bemVindo = alert("Seja bem-vindo à nossa loja de piso!\n\n Vamos dar início ao atendimento."); 
+
+orcamento = prompt("Gostaria de fazer um orçamento?");
+
+switch(orcamento.toLowerCase()){ 
+    case "sim": 
+        alert("Vamos lá!"); 
+        valorPiso = parseFloat(prompt("Digite o valor do piso ")); 
+        larguraAmbiente = parseFloat(prompt("Para sabermos a área do ambiente, digite a largura (m)")); 
+        comprimentoAmbiente = parseFloat(prompt("Digite o comprimento do ambiente ")); 
+        areaAmbiente = larguraAmbiente * comprimentoAmbiente; 
+        areaComprada = Math.ceil(areaAmbiente); 
+        alert("A área do seu ambiente é "+areaAmbiente.toFixed(2)+"m². Porém, para que o atenda, precisará ser comprado "+areaComprada+"m²."); 
+        valorCheio = valorPiso * areaComprada; 
+        alert("O valor total da compra é R$: " + valorCheio + ",00"); 
+        var prosseguirAtendimento = prompt("Deseja prosseguir com a compra? "); 
+        switch(prosseguirAtendimento.toLowerCase()) { 
+            case "sim": 
+                alert("Perfeito! \n\n * Para o pagamento, temos as seguintes condições: *\n - Pagamento à vista no dinheiro : 10% de desconto\n - Pagamento no débito: 5% de desconto\n - Pagamento no crédito à vista: Acréscimo de 1%\n - Pagamento no crédito parcelado em até 12x: Acréscimo de 2%"); 
+                break; 
+            case "não": 
+            case "nao":
+                alert("Te aguardo em uma próxima"); 
+                break; 
+            default: 
+                alert("Opção inválida!"); 
+        } 
+        break; 
+    case "não": 
+    case "nao":
+        document.write("Te aguardo em uma próxima"); 
+        break; 
+    default:
+        alert("Opção inválida!"); 
+}
+
+var descontoDinheiro = valorCheio * (10/100); 
+var descontoDebito = valorCheio * (5/100); 
+var acrescimoCreditoAvista = valorCheio * (1/100); 
+var acrescimoCreditoParcelado = valorCheio * (2/100); 
+
+dinheiro = valorCheio - descontoDinheiro; 
+debito = valorCheio - descontoDebito; 
+creditoAvista = valorCheio + acrescimoCreditoAvista; 
+parcelado = valorCheio + acrescimoCreditoParcelado;
+
+formaPagamento = parseInt(prompt("Qual forma de pagamento melhor o atende?\nDigite 1 para Dinheiro\nDigite 2 para Débito\nDigite 3 para Crédito à vista\nDigite 4 para Crédito Parcelado")); 
+
+switch (formaPagamento) { 
+    case 1: 
+        alert("Sua compra sai no valor de: R$" + dinheiro + " \n\n Obrigado pela compra!"); 
+        break; 
+    case 2: 
+        alert("Sua compra sai no valor de: R$" + debito + " \n\n Obrigado pela compra!"); 
+        break; 
+    case 3: 
+        alert("Sua compra sai no valor de: R$" + creditoAvista + " \n\n Obrigado pela compra!"); 
+        break; 
+    case 4: 
+        alert("Sua compra sai no valor de: R$" + parcelado + " \n\n Obrigado pela compra!"); 
+        break; 
+    default: 
+        alert("Opção inválida!"); 
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
