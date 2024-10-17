@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* Construir um programa no qual o usuário irá digitar um número e o programa irá dizer se ele 
+é par ou ímpar (utilizar o comando função) */
+
+        function parOuImpar(numero){
+            if (numero % 2 === 0){
+                return `${numero} é par`;
+
+             }else{ 
+                return `${numero} é impar`;
+             }    
+        }
+        let numero = parseFloat(prompt("Digitar um numero "));
+        let resultado = parOuImpar(numero);
+        alert(resultado);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
