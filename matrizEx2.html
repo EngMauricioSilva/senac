@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /*Construir um programa que contenha uma matriz 3X3 e o usuário irá escolher uma linha para
+visualizar os valores que contenham nesta linha da matriz*/
+// Criando uma matriz 3x3
+
+
+let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+// Exibindo todos os valores da matriz no console
+console.log("Matriz completa:");
+for (let i = 0; i < matriz.length; i++) {
+    console.log(matriz[i]);
+}
+
+// Pedindo ao usuário para escolher uma linha (0, 1 ou 2)
+let linha = parseInt(prompt("Qual linha você quer visualizar? (0, 1 ou 2)"));
+
+// Verificando se a entrada do usuário é válida
+if (linha >= 0 && linha < matriz.length) {
+    // Exibindo os valores da linha escolhida
+    console.log(`Valores na linha ${linha}:`, matriz[linha]);
+} else {
+    console.log("Linha inválida. Por favor, escolha uma linha entre 0 e 2.");
+}
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
